@@ -1,31 +1,19 @@
-const getPromise = () => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve('promise resolved');
-        }, 3000);
-    })
-}
+import {BinaryTree} from "./binary-tree.mjs";
 
-const foo = () => {
-    setTimeout(() => {
-        console.log('foo');
-    }, 0);
-}
 
-const bar = () => {
-    const sum = 2 + 2;
-    console.log(sum);
-}
+const binaryTree = new BinaryTree(1)
 
-// getPosts().then((posts) => {
-//     console.log(posts);
-// });
+binaryTree.addChildren(1, 30)
 
-const promise = getPromise();
-foo();
-bar();
 
-console.log(promise);
-promise.then((data) => {
-    console.log(data);
-});
+const now = performance.now()
+
+console.log('now', now)
+
+// binaryTree.invertDfs()
+binaryTree.invertBfs()
+
+const then = performance.now()
+
+console.log('then', then)
+console.log('delay', then - now)
