@@ -1,7 +1,7 @@
 {
   "name": "playground",
   "version": "1.0.0",
-  "description": "",
+  "description": "Learn Nodejs by playing with it",
   "main": "build/index.js",
   "type": "module",
   "scripts": {
@@ -15,5 +15,8 @@
   "devDependencies": {
     "@types/node": "^22.4.1",
     "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "fastify": "^4.26.2"
   }
 }
